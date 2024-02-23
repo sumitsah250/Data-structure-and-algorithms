@@ -7,7 +7,6 @@ class Node {
     Node(){
         data=0;
         next=NULL;
-
     }
     Node(int data){
         this->data=data;
@@ -40,6 +39,11 @@ void Linkedlist::insertNode(int data,int position=0 ){
         temp = temp->next;
     }
     temp->next =newNode;
+    }
+    if(position == 1){
+        newNode->next=head;
+        head=newNode;
+        return;
     }
     if(position != 0){
 
@@ -107,6 +111,7 @@ int main(){
     lisa.printList();
     cout<<endl;
      lisa.insertNode(99,4);
+     lisa.insertNode(98,1);
      lisa.printList();
     cout<<endl;
     lisa.deleteNode(1);
