@@ -28,7 +28,7 @@ void Linkedlist::insertNode(int data,int position=0 ){
     Node* temp1,*temp2;
     int ListLen;
 
-    if(head ==NULL){
+    if(head == NULL){
         head =newNode;
         return;
     }
@@ -45,7 +45,7 @@ void Linkedlist::insertNode(int data,int position=0 ){
         head=newNode;
         return;
     }
-    if(position != 0){
+    if(position != 0 && position !=1){
 
            while(position-- > 1){
         temp2=temp1;
