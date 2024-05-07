@@ -65,7 +65,7 @@ int main(){
     stack_implementation1.push(4);
     stack_implementation1.display();    
 
-      
+
         cout<<stack_implementation1.pop()<<endl;
         cout<<stack_implementation1.pop()<<endl;
         stack_implementation1.display();
