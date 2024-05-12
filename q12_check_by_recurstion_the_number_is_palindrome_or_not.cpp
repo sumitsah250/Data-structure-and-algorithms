@@ -13,10 +13,6 @@ int palindrome_check(string sumit,int start,int end){
     
 }
 
-
-
-
-
 int main(){
     string sumit;
     cout<<"enter the string to be checked:"<<endl;
