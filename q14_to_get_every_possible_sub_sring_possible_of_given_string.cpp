@@ -14,6 +14,7 @@ void dispaly( list<string> &lst){
     cout<<endl;
 }
 
+
 void helper(string s,string tempans,int index){
   if(s.size()== index){
     sumit.push_back(tempans);
@@ -22,8 +23,8 @@ void helper(string s,string tempans,int index){
     helper(s,tempans+s[index],index+1);
     helper(s,tempans,index+1);
     return;
-    
   }
+  
 }
 
 int main(){
