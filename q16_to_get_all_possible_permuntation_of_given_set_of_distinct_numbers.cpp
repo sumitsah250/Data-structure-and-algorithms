@@ -5,24 +5,28 @@ vector<vector<int>> subset;
 
 void helper(vector<int> set,int index){
     int temp;
-    if(index==set.size()){
+    if(index>=set.size()){
         subset.push_back(set);
         return;
     }
-    else{
-        
-        for(index;index<set.size();index++){
-            for(int i=index;i<set.size();i++){
-            temp=set[index];
-            set[index]=set[index+i];
-            set[index+i]=temp;
-            return helper(set,index);
-        }
+    // else{
+    //     for(index;index<set.size();index++){
+    //         for(int i=index;i<set.size();i++){
+    //         temp=set[index];
+    //         set[index]=set[index+i];
+    //         set[index+i]=temp;
+    //         return helper(set,index+i);
+    //     }
+    //     }
+    // }
 
-        }
-      
-
+    for(int j=index;j<set.size();j++){
+        swap(set[index],set[j]);
+        helper(set,index+1);
+        //backtracking
+        swap(set[index],set[j]);
     }
+    return;
 }
 
 
@@ -39,9 +43,9 @@ int main(){
     helper(set,0);
     for(int i=0;i<subset.size();i++){
         for(int j=0;j<subset[i].size();j++){
-            cout<<subset[i][j]<<endl;
-
+            cout<<subset[i][j];
         }
+        cout<<endl;
     }
     return 0;
 }
