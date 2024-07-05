@@ -59,8 +59,8 @@ void Linkedlist::deleteNode(int nodeofset){
     }
     if( ListLen < nodeofset){
         cout<<"index out of range"<<endl;
-
     }
+    
     temp1=head;
     if(nodeofset == 1 ){
         head=head->next;
