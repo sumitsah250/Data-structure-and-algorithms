@@ -12,7 +12,7 @@ using namespace std;
         }
        bool call1= helper(data,tempsum+data[index],index+1,sum);
        bool call2 = helper(data,tempsum,index+1,sum);
-       return call1 ||call2;
+       return call1 || call2;
   }
 
 int main(){

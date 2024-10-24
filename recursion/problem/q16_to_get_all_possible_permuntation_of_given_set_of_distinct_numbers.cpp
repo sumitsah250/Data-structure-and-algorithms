@@ -21,7 +21,7 @@ void helper(vector<int> set,int index){
     // }
 
     for(int j=index;j<set.size();j++){
-        swap(set[index],set[j]);
+        swap(set[index],set[j ]);
         helper(set,index+1);
         //backtracking
         swap(set[index],set[j]);
