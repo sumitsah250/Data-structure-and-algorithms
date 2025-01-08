@@ -15,6 +15,7 @@ vector<vector<int>> matrix = {
 };
 
 int n = 8, m = 8;
+
 vector<vector<char>> pathMatrix(n, vector<char>(m, ' '));
 vector<vector<int>> visited(n, vector<int>(m, 0));
 int totalPaths = 0;
