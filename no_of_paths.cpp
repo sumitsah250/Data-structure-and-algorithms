@@ -14,6 +14,7 @@ int countPaths(vector<vector<int>> &matrix, int x, int y, int n, int m) {
     return countPaths(matrix, x + 1, y, n, m) + countPaths(matrix, x, y + 1, n, m);
 }
 
+
 int main() {
     int n = 8, m = 8;
     vector<vector<int>> matrix = {
